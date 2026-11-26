@@ -62,7 +62,7 @@
 
 <header>
   <h1>haneul55</h1>
-  <p class="lead">수원대학교에서 데이터와 머신러닝을 공부하고 있습니다. 올해는 대회와 수업 프로젝트 하나씩, 앱 하나를 만들었고, 아래에 정리해 두었습니다. 각 프로젝트의 자세한 과정은 저장소 README에 있습니다.</p>
+  <p class="lead">수원대학교에서 데이터와 머신러닝을 공부하고 있습니다. 올해는 데이터 분석 대회와 수업 프로젝트, AI 에이전트 공모전 기획, 안드로이드 앱을 하나씩 만들었고, 아래에 정리해 두었습니다. 각 프로젝트의 자세한 과정은 저장소 README에 있습니다.</p>
   <div class="links">
     <a href="https://github.com/haneul55">GitHub</a>
     <!-- 이메일을 넣으려면 아래 줄의 주석을 풀고 주소를 바꾸세요 -->
@@ -101,6 +101,20 @@
   </article>
 
   <article class="card">
+    <h3>센티넬: 보유 자산 리스크 조기경보 AI 에이전트 (KIC 공모전 기획)</h3>
+    <div class="meta">개인 · 2026년 11월 · 국부펀드 KIC AI 에이전트 공모전 예선 기획</div>
+    <p>KIC가 가진 미국 주식에 밤사이 생긴 위험을 에이전트가 찾아서 조사하고, 아침 전에 알려 주는 서비스를 기획했습니다. 기획서에 들어간 숫자는 모두 SEC 공시를 직접 모아 분석해서 얻었고, 그 코드도 저장소에 있습니다.</p>
+    <ul>
+      <li>상위 15종목의 1년치 SEC 공시 28,688건을 모아 보니, 주요 사건 공시(8-K) 184건 중 183건(99.5%)이 한국 업무시간 밖에 나왔습니다. 이걸 문제 정의로 삼았습니다.</li>
+      <li>연간 보고서(10-K)의 위험 요인 문장을 작년 것과 비교해 새로 생긴 문장을 찾는 코드를 짰습니다. Apple에서 새 문장 89개가 나왔습니다.</li>
+      <li>에이전트가 도구 8종 중 필요한 것을 골라 조사하고, 출처 두 곳 이상에서 확인될 때만 경보하도록 흐름을 설계했습니다.</li>
+      <li>기획서는 PowerPoint 자동화 스크립트로 공식 양식에 내용과 도표를 채워 만들었습니다.</li>
+    </ul>
+    <div class="tags"><span>Python</span><span>SEC EDGAR API</span><span>AI 에이전트 설계</span><span>텍스트 비교</span></div>
+    <a class="go" href="https://github.com/haneul55/sentinel-risk-agent">저장소 보기</a>
+  </article>
+
+  <article class="card">
     <h3>사진 가계부 (안드로이드 앱)</h3>
     <div class="meta">개인 · 2026년 10월</div>
     <p>영수증이나 결제 화면을 찍으면 품목과 금액을 읽어서 가계부에 넣어 주는 앱입니다. 제가 쓰려고 만들었습니다.</p>
@@ -125,7 +139,8 @@
   <dl>
     <dt>언어</dt><dd>Python, SQL, Dart</dd>
     <dt>머신러닝</dt><dd>LightGBM, CatBoost, scikit-learn, PyTorch</dd>
-    <dt>앱</dt><dd>Flutter, SQLite</dd>
+    <dt>데이터 수집</dt><dd>REST API(SEC EDGAR), 텍스트 전처리</dd>
+    <dt>앱·웹</dt><dd>Flutter, SQLite, HTML/CSS(GitHub Pages)</dd>
     <dt>공부 중</dt><dd>SQLD, 코딩테스트</dd>
   </dl>
 </section>
