@@ -62,7 +62,7 @@
 
 <header>
   <h1>haneul55</h1>
-  <p class="lead">수원대학교에서 데이터와 머신러닝을 공부하고 있습니다. 올해는 데이터 분석 대회와 수업 프로젝트, AI 에이전트 공모전 기획, 안드로이드 앱을 하나씩 만들었고, 아래에 정리해 두었습니다. 각 프로젝트의 자세한 과정은 저장소 README에 있습니다.</p>
+  <p class="lead">수원대학교에서 데이터와 머신러닝을 공부하고 있습니다. 데이터 분석 대회, 의료 데이터(건강 설문·흉부 X-ray) 모델, AI 에이전트 공모전 기획, 안드로이드 앱을 만들었고, 아래에 정리해 두었습니다. 각 프로젝트의 자세한 과정은 저장소 README에 있습니다.</p>
   <div class="links">
     <a href="https://github.com/haneul55">GitHub</a>
     <!-- 이메일을 넣으려면 아래 줄의 주석을 풀고 주소를 바꾸세요 -->
@@ -98,6 +98,20 @@
     </ul>
     <div class="tags"><span>Python</span><span>LightGBM</span><span>CatBoost</span><span>scikit-learn</span></div>
     <a class="go" href="https://github.com/haneul55/vitamin-d-deficiency-prediction">저장소 보기</a>
+  </article>
+
+  <article class="card">
+    <h3>흉부 X-ray 폐렴 선별 모델</h3>
+    <div class="meta">팀 프로젝트 · 2025년 11월 · ResNet50 미세조정 3-Fold CV AUC 0.91 · 테스트 AUC 0.934</div>
+    <p>흉부 X-ray 사진으로 정상과 폐렴을 가려내는 모델을 만들었습니다. 폐렴 사진이 정상보다 3배 많았고, 의료에서는 폐렴을 놓치는 오류가 가장 위험해서 정확도 대신 혼동행렬로 모델을 비교했습니다.</p>
+    <ul>
+      <li>Simple CNN, VGG16, ResNet50을 비교했습니다. ResNet50은 분류기만 먼저 학습하고 마지막 40개 층만 풀어 미세조정하는 2단계로 학습했습니다.</li>
+      <li>3-Fold 교차검증에서 AUC가 0.898~0.922로 고르게 나와, 데이터를 다르게 나눠도 성능이 흔들리지 않는 걸 확인했습니다.</li>
+      <li>class_weight를 넣으면 정상 오진이 늘어서, 넣지 않는 쪽을 골랐습니다. 결론은 단독 진단이 아니라 1차 선별 보조용입니다.</li>
+      <li>기준값과 앙상블 가중치를 테스트를 보고 정한 점은 한계로 적어 두었습니다. 1년 뒤 비타민 D 프로젝트에서는 처음부터 교차검증만으로 모델을 골랐습니다.</li>
+    </ul>
+    <div class="tags"><span>Python</span><span>TensorFlow/Keras</span><span>전이학습</span><span>의료 영상</span></div>
+    <a class="go" href="https://github.com/haneul55/chest-xray-pneumonia-classification">저장소 보기</a>
   </article>
 
   <article class="card">
@@ -138,7 +152,7 @@
   <h2>쓸 줄 아는 것</h2>
   <dl>
     <dt>언어</dt><dd>Python, SQL, Dart</dd>
-    <dt>머신러닝</dt><dd>LightGBM, CatBoost, scikit-learn, PyTorch</dd>
+    <dt>머신러닝</dt><dd>LightGBM, CatBoost, scikit-learn, PyTorch, TensorFlow/Keras</dd>
     <dt>데이터 수집</dt><dd>REST API(SEC EDGAR), 텍스트 전처리</dd>
     <dt>앱·웹</dt><dd>Flutter, SQLite, HTML/CSS(GitHub Pages)</dd>
     <dt>공부 중</dt><dd>SQLD, 코딩테스트</dd>
